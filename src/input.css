@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+  /* font-weight: 400, 700, 800; */
+}
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter";
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  @apply font-inter;
+}
+
+p,
+a {
+  @apply text-[var(--grayish-blue)];
+}
+
+h1,
+h3 {
+  @apply text-[var(--very-dark-blue)] font-[800];
+}
