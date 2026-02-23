@@ -19,13 +19,7 @@ body {
   @apply font-inter p-24 bg-(--off-white);
 }
 
-p,
-a {
-  @apply text-(--dark-grayish-blue);
-}
-
-h1,
-h3 {
+h1{
   @apply text-(--very-dark-blue) font-extrabold;
 }
 
@@ -34,18 +28,9 @@ h3 {
 }
 
 .nav-links a {
-  @apply px-4;
-  @apply text-(--very-dark-blue) font-extrabold;
+  @apply px-4 text-(--dark-grayish-blue);
 }
 
-.nav-links {
-  @apply flex;
-}
-
-.nav-links a {
-  @apply px-4;
-}
-
-.nav-links a:active{
-  @apply text-(--soft-red)
+.nav-links a:active {
+  @apply text-(--soft-red);
 }
