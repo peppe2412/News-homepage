@@ -19,7 +19,11 @@ body {
   @apply font-inter p-24 bg-(--off-white);
 }
 
-h1{
+hr {
+  @apply bg-(--dark-grayish-blue) h-0.5 mt-7 mb-7;
+}
+
+h1 {
   @apply text-(--very-dark-blue) font-extrabold;
 }
 
