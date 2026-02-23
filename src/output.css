@@ -1,4 +1,4 @@
-/*! tailwindcss v4.2.0 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
 @layer properties;
 @font-face {
   font-family: "Inter";
@@ -12,14 +12,13 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
+    --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-inter: "Inter";
-    --grayish-blue: hsl(233, 8%, 79%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
   }
 }
@@ -178,19 +177,41 @@
   .start {
     inset-inline-start: var(--spacing);
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
   .contents {
     display: contents;
+  }
+  .flex {
+    display: flex;
   }
   .table {
     display: table;
   }
-  .text-7xl {
-    font-size: var(--text-7xl);
-    line-height: var(--tw-leading, var(--text-7xl--line-height));
+  .items-center {
+    align-items: center;
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
+  .justify-end {
+    justify-content: flex-end;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -198,15 +219,35 @@
   }
 }
 body {
+  background-color: var(--off-white);
+  padding: calc(var(--spacing) * 24);
   font-family: var(--font-inter);
 }
 p, a {
-  color: var(--grayish-blue);
+  color: var(--dark-grayish-blue);
 }
 h1, h3 {
-  --tw-font-weight: 800;
-  font-weight: 800;
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--very-dark-blue);
+}
+.nav-links {
+  display: flex;
+}
+.nav-links a {
+  padding-inline: calc(var(--spacing) * 4);
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--very-dark-blue);
+}
+.nav-links {
+  display: flex;
+}
+.nav-links a {
+  padding-inline: calc(var(--spacing) * 4);
+}
+.nav-links a:active {
+  color: var(--soft-red);
 }
 @property --tw-outline-style {
   syntax: "*";
