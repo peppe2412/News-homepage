@@ -20,7 +20,7 @@
         <a href="/src/index.html">
           <img src="/assets/images/logo.svg" alt="Logo" />
         </a>
-        <div class="container flex items-center justify-end">
+        <div class="container hidden lg:flex items-center justify-end">
           <ul class="nav-links">
             <li><a href="/src/index.html">Home</a></li>
             <li><a href="/src/index.html">New</a></li>
@@ -29,25 +29,36 @@
             <li><a href="/src/index.html">Categories</a></li>
           </ul>
         </div>
+        <div class="container flex lg:hidden items-center justify-end">
+          <button>
+            <img src="/assets/images/icon-menu.svg" alt="icon-menu" />
+          </button>
+        </div>
       </nav>
     </header>
 
-    <main class="container grid grid-cols-12 gap-7">
+    <main class="lg:container lg:grid lg:grid-cols-12 lg:gap-7">
       <article class="col-span-8">
         <div class="mb-9">
           <div>
             <img
+              class="lg:flex hidden"
               src="/assets/images/image-web-3-desktop.jpg"
               alt="image-web-3-desktop"
             />
+            <img
+              class="lg:hidden flex"
+              src="/assets/images/image-web-3-mobile.jpg"
+              alt="image-web-3-mobile"
+            />
           </div>
         </div>
-        <div class="flex gap-10">
-          <div>
-            <h1 class="text-6xl">The Bright Future of Web 3.0?</h1>
+        <div class="lg:flex gap-10">
+          <div class="lg:mb-0 mb-2">
+            <h1 class="lg:text-6xl text-4xl">The Bright Future of Web 3.0?</h1>
           </div>
-          <div class="flex flex-col">
-            <p class="mb-10 text-[15px]">
+          <div class="flexflex-col">
+            <p class="lg:mb-10 mb-7 text-[15px]">
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
@@ -63,8 +74,8 @@
           </div>
         </div>
       </article>
-      <section class="bg-(--very-dark-blue) col-span-4">
-        <div class="mt-5 p-4 mb-5">
+      <section class="bg-(--very-dark-blue) lg:col-span-4 lg:mt-0 mt-16">
+        <div class="mt-5 lg:p-4 p-7 mb-5">
           <h2 class="text-(--soft-orange) font-bold text-4xl mb-5">New</h2>
           <div>
             <h3 class="text-(--off-white) text-lg font-bold mb-2">
@@ -99,46 +110,48 @@
     </main>
 
     <section class="mt-16">
-      <div class="flex gap-6">
-        <div>
+      <div class="flex lg:flex-row flex-col gap-6">
+        <div class="flex gap-5">
           <img
-            class="w-36"
+            class="lg:w-32 w-28"
             src="/assets/images/image-retro-pcs.jpg"
             alt="image-retro-pcs"
           />
+          <div>
+            <h2 class="text-3xl font-bold text-(--soft-red) mb-3">01</h2>
+            <h3 class="font-extrabold text-(--very-dark-blue) mb-2">
+              Reviving Retro PCs
+            </h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
         </div>
-        <div>
-          <h2 class="text-3xl font-bold text-(--soft-red) mb-3">01</h2>
-          <h3 class="font-bold text-(--very-dark-blue) mb-2">Reviving Retro PCs</h3>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </div>
-        <div>
+        <div class="flex gap-5">
           <img
-            class="w-36"
+            class="lg:w-32 w-28"
             src="/assets/images/image-top-laptops.jpg"
             alt="image-top-laptops"
           />
+          <div>
+            <h2 class="text-3xl font-bold text-(--soft-red) mb-3">02</h2>
+            <h3 class="font-extrabold text-(--very-dark-blue) mb-2">
+              Top 10 Laptops of 2022
+            </h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
         </div>
-        <div>
-          <h2 class="text-3xl font-bold text-(--soft-red) mb-3">02</h2>
-          <h3 class="font-bold text-(--very-dark-blue) mb-2">
-            Top 10 Laptops of 2022
-          </h3>
-          <p>Our best picks for various needs and budgets.</p>
-        </div>
-        <div>
+        <div class="flex gap-5">
           <img
-            class="w-36"
+            class="lg:w-32 w-28"
             src="/assets/images/image-gaming-growth.jpg"
             alt="image-gaming-growth"
           />
-        </div>
-        <div>
-          <h2 class="text-3xl font-bold text-(--soft-red) mb-3">03</h2>
-          <h3 class="font-bold text-(--very-dark-blue) mb-2">
-            The Growth of Gaming
-          </h3>
-          <p>How the pandemic has sparked fresh opportunities.</p>
+          <div>
+            <h2 class="text-3xl font-bold text-(--soft-red) mb-3">03</h2>
+            <h3 class="font-extrabold text-(--very-dark-blue) mb-2">
+              The Growth of Gaming
+            </h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
         </div>
       </div>
     </section>

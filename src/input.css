@@ -16,7 +16,7 @@
 }
 
 body {
-  @apply font-inter p-24 bg-(--off-white);
+  @apply font-inter lg:p-24 p-4 bg-(--off-white);
 }
 
 hr {
