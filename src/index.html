@@ -15,6 +15,30 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
+
+    <div id="overlay" class="bg-black/50 z-1 fixed hidden inset-0"></div>
+
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="bg-(--off-white) z-1 top-0 right-0 py-7 p-5 h-full w-56 lg:hidden hidden overflow-x-hidden fixed"
+    >
+      <div class="flex justify-end">
+        <button onclick="closeSidebar()">
+          <img src="/assets/images/icon-menu-close.svg" alt="icon-menu-close" />
+        </button>
+      </div>
+      <div class="mt-16">
+        <ul class="sidebar-links">
+          <li><a href="/src/index.html">Home</a></li>
+          <li><a href="/src/index.html">New</a></li>
+          <li><a href="/src/index.html">Popular</a></li>
+          <li><a href="/src/index.html">Trending</a></li>
+          <li><a href="/src/index.html">Categories</a></li>
+        </ul>
+      </div>
+    </aside>
+
     <header class="mb-12">
       <nav class="flex">
         <a href="/src/index.html">
@@ -30,7 +54,7 @@
           </ul>
         </div>
         <div class="container flex lg:hidden items-center justify-end">
-          <button>
+          <button onclick="openSidebar()">
             <img src="/assets/images/icon-menu.svg" alt="icon-menu" />
           </button>
         </div>
